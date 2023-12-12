@@ -1,5 +1,5 @@
 import axios from "axios";
-import Authentication from "services/Authentication";
+import Authentication from "../../../services/Authentication";
 
 let auth;
 

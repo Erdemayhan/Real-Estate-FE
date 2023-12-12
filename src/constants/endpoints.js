@@ -1,5 +1,5 @@
-const users = {
+const user = {
   getUsers: () => `/users`,
 };
 
-export { users };
+export { user };
