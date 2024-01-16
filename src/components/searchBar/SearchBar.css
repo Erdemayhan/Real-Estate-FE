@@ -1,0 +1,87 @@
+
+.searchbar .container {
+    padding-top: 15%;
+  }
+  .searchbar h1 {
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Salsa', cursive;
+  }
+
+
+  .searchbar p {
+    color: #fff;
+    opacity: 0.8;
+    text-align: center;
+    font-family: 'Salsa', cursive;
+    font-size: 40px;
+  }
+  form {
+    background-color: #00a6a6;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  form input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgba(255, 44, 44, 0.2);
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  form span {
+    font-size: 20px;
+    color: rgb(250, 250, 250);
+    font-family: 'Salsa', cursive;
+  }
+  input::placeholder {
+    font-size: 17px;
+    color: black;
+    font-family: 'Salsa', cursive;
+  }
+  form .box {
+    padding: 15px;
+    border-left: 1px solid rgba(128, 128, 128, 0.2);
+  }
+  form .box:nth-child(1) {
+    border-left: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    .searchbar .container {
+      padding-top: 30%;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    form .box {
+      border-left: none;
+    }
+    form input {
+      width: 100%;
+    }
+  }
+
+  .btn {
+    background-color: #E6D72A; /* Green */
+    border: none;
+    font-family: 'Salsa', cursive;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  
+  .btn:hover {
+    background-color: #F18D9E; 
+    color: black; 
+    border: 2px solid #F18D9E;
+  }
+
