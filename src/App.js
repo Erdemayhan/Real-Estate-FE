@@ -1,11 +1,12 @@
 import "./App.css";
 import getUsers from "./services/getUsers";
 import useAPI from "./effects/useAPI";
+import Header from "./components/Header";
 
 function App() {
   //3-4 params alir (loading, error, response)
   const [loading, error, response] = useAPI(() => getUsers());
-  //error ve loading hadling
+  //error ve loading handling
   if (error) {
     return <div>Error...</div>;
   }
@@ -18,6 +19,7 @@ function App() {
   console.log(response, "response");
   return (
     <div className="App">
+      <Header /> {/* header component!!! */}
       <div>
         {users.map((user) => {
           return (
