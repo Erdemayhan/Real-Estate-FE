@@ -1,52 +1,39 @@
-#features {
+#features, section {
+    width: 60%; /* Adjust this to change the box's width */
+    margin: 0 auto; /* Auto margins to center the box */
     padding: 2rem;
     border-radius: 6px;
     background-color: #00a6a6;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    font-family: 'Salsa', cursive;
-    margin-top: -150px;
+    text-align: center;
+}
+
+
+#features {
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: #00a6a6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 
 
 #features ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  #features li {
-    width: 10rem;
-    text-align: center;
-  }
-  
-  #features li img {
-    height: 4rem;
-    width: 6rem;
-    object-fit: cover;
-  }
-  
-  #features li h3 {
-    margin: 0.5rem 0;
-  }
-  
-  #features li p {
-    font-size: 0.9rem;
-  }
-
-  main {
-    width: 90%;
-    max-width: 50rem;
-    margin: auto;
-    padding-top: 300px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
 }
 
-main h2 {
-    text-align: center;
-    font-family: 'Salsa', cursive;
-    margin: 0 0 1.5rem 0;
-    color: #eae1f3;
+#features li {
+  width: 10em;
 }
+
+
+
+
+
+
+

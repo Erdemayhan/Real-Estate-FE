@@ -42,7 +42,7 @@ export default function PropertyTypes(){
                 <TabButton isSelected={selectedType === "office"} onClick={() => handleClick("office")}>Office</TabButton>
                 <TabButton isSelected={selectedType === "semiDetachedHouse"} onClick={() => handleClick("semiDetachedHouse")}>Semi-Detached House</TabButton>
                 <TabButton isSelected={selectedType === "pentHouse"} onClick={() => handleClick("pentHouse")}>Penthouse</TabButton>
-                <TabButton isSelected={selectedType === "dormitory"} onClick={() => handleClick("dormitory")}>Penthouse</TabButton>
+                <TabButton isSelected={selectedType === "dormitory"} onClick={() => handleClick("dormitory")}>Dormitory</TabButton>
                 {/*the way you write the props inside onSelect arrow func must match the way its written in EXAMPLES*/}
             </>}>
             {tabContent}

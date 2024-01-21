@@ -1,23 +1,27 @@
-#types {
-    margin: 3rem auto;
-  }
+.property-types {
+  width: 60%; /* Adjust this to change the card's width */
+  margin: 20px auto; /* Auto margins to center the card, 20px vertical margin to separate it from other components */
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: #00a6a6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Box shadow to give the card a "lifted" effect */
+  margin: 4rem auto;
+}
+
   
-  #types h2 {
-    text-align: center;
-  }
-  
-  #types menu {
-    margin: 1rem 0;
-    padding: 0;
-    display: flex;
-    gap: 0.5rem;
-    list-style: none;
-  }
-  
-  #types menu button {
-    padding: 0.5rem 1rem;
+#types menu {
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  justify-content: center;
+}
+
+  #types menu, button {
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
+    align-items: center;
     background-color: transparent;
     color: #e6d72a;
     font-family: 'Salsa', cursive;
@@ -25,51 +29,13 @@
     cursor: pointer;
     transition: all 0.2s ease-in-out;
   }
-  
+
   #types menu button:hover {
     background-color: #f18d9e;
     color: #000000;
   }
-  
   #types menu button.active {
     background-color: #e6d72a;
     color: #ebe7ef;
   }
   
-  #tab-contents {
-    padding: 2rem;
-    font-family: 'Salsa', cursive;
-    border-radius: 9px;
-    background-color: #00a6a6;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  #tab-contents h3 {
-    margin: 0;
-  }
-
-.centered-text {
-    text-align: center;
-    width: 100%;
-    font-weight: bold;
-    font-family: 'Salsa', cursive;
-}
-
-.property-types {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.tab-content{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
-}
-

@@ -1,5 +1,6 @@
 * {
-    box-sizing: border-box;
+    font-family: 'Salsa', cursive;
+    
 }
 
 html {
@@ -11,18 +12,7 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
-    min-height: 80rem;
 }
 
-.main {
-    background-image: url("../src/assets/BackgroundImage.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 150vh;
-    width: 100%;
-    font-family: 'Salsa', cursive;
-    text-align: center;
-    margin: 3rem 0;
-}
+
 

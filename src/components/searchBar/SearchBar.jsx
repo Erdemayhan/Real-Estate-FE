@@ -3,35 +3,77 @@ import Heading from "./Heading";
 import '../searchBar/SearchBar.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleDot } from "@fortawesome/free-solid-svg-icons";
+import useAPI from "../../effects/useAPI";
+import getAllProperties from "../../services/getAllProperties";
+import getPropertyTypes from "../../services/getPropertyTypes";
+
+
 
 
 export default function SearchBar(){
+    const [loading, error, response ] = useAPI(() => getAllProperties());
+    const [loading2, error2,response2] = useAPI(() => getPropertyTypes());
+
+    if(error, error2){
+        return <div>Something went wrong</div>
+      }if(loading, loading2){
+        return <div>Loading...</div>
+      }
+    
+    const { properties } = response;
+    const { property_types } = response2
     return (
         <>
-            <section className="searchbar">
-                <div className="container">
-                    <Heading title="Search for your dream home" subtitle="Search as you type" />
+        <section className="searchbar">
+            <div className="container">
+                <Heading title="Search for your dream home" />
+                <form className="flex">
+                <div className="box">
+                    <span>City/Street</span>
+                    <select id="cities" className="custom-select" defaultValue="">
+                    <option value="" disabled hidden>Pick your city</option>
+                    {properties.map((property)=> {
+                        return (
+                                <>
+                                <option value={property.location}>{property.location}</option>
+                                </>
+                            )
+                        })}
+                    </select>
+                </div>
 
-                    <form className="flex">
-                        <div className="box">
-                            <span>City/Street</span>
-                            <input type="text" placeholder="Location" />
-                        </div>
+                <div className="box">
+                    <span>Property Type</span>
+                    <select id="property-types" className="custom-select" defaultValue="">
+                    <option value="" disabled hidden>Property Type</option>
+                    {property_types.map((property_type, index)=> {
+                        return (
+                                <>
+                                <option key={index} value={property_type.propertyType}>{property_type.propertyType}</option>
+                                </>
+                            )
+                        })}
+                    </select>
+                </div>
 
-                        <div className="box">
-                            <span>Property Type</span>
-                            <input type="text" placeholder="Property Type" />
-                        </div>
+                <div className="box">
+                    <span>Price Range</span>
+                    <select id="prices" className="custom-select" defaultValue="">
+                    <option value="" disabled hidden>Price Range</option>
+                    {properties.map((property)=> {
+                        return (
+                                <>
+                                <option value={property.price}>{property.price}</option>
+                                </>
+                            )
+                        })}
+                    </select>
+                </div>
 
-                        <div className="box">
-                            <span>Price Range</span>
-                            <input type="text" placeholder="Price Range" />
-                        </div>
-
-                        <button className="btn">
-                        <FontAwesomeIcon icon={faCircleDot} style={{ marginRight: '10px' }} />Search
-                        </button>
-                    </form>
+                <button className="btn">
+                <FontAwesomeIcon icon={faCircleDot} style={{ marginRight: '10px' }} />Search
+                </button>
+                </form>
                 </div>
             </section>
         </>
