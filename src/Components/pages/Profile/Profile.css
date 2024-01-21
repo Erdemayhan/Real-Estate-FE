@@ -1,0 +1,32 @@
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profile-image-action-btn {
+border: 1px solid grey;
+background-color: white;
+border-radius: 5px;
+font-size: 13px;
+font-weight: bold;
+cursor: pointer;
+}
+.profile-tab {
+  cursor: pointer;
+  text-align: center;
+background-color: #f6f6f6 ;
+font-weight: 500;
+font-size: 18px;
+}
+.active-tab {
+  border-bottom: 3px solid #1da1f2;
+  background-color: white;
+}
+
+.edit-profile-btn {
+  color: white;
+  border: none;
+  background-color: blue;
+}
+

@@ -5,7 +5,7 @@ import useAPI from "./effects/useAPI";
 function App() {
   //3-4 params alir (loading, error, response)
   const [loading, error, response] = useAPI(() => getUsers());
-  //error ve loading hadling
+  //error ve loading handling
   if (error) {
     return <div>Error...</div>;
   }
@@ -22,12 +22,13 @@ function App() {
         {users.map((user) => {
           return (
             <div>
-              <p>
-                {user.firstName} {user.lastName}
-              </p>
+              <p>{user.id}</p>
+              <p>{user.username}</p>
 
               <p>{user.email}</p>
-              <p>{user.phoneNumber}</p>
+              <p>{user.password}</p>
+              <p>{user.userTypeId}</p>
+              <p>{user.createdAt}</p>
             </div>
           );
         })}
