@@ -14,14 +14,17 @@ function App() {
   }
   //postmandeki beklediginiz dataya gore distruct ediniz
   const { users } = response;
-  // debug
-  console.log(response, "response");
+
+  if (!users || users.length === 0) {
+    return <div>No users found</div>;
+  }
+
   return (
     <div className="App">
       <div>
-        {users.map((user) => {
+        {users.map((user, index) => {
           return (
-            <div>
+            <div key={index}>
               <p>{user.id}</p>
               <p>{user.username}</p>
 
