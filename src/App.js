@@ -1,5 +1,7 @@
 import "./App.css";
+import AddAProperty from "./pages/AddAProperty.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import ViewProperties from "./pages/ViewProperties.jsx";
 
 function App() {
 
@@ -9,6 +11,8 @@ function App() {
     <div className="App">
       
       <HomePage/>
+      <AddAProperty/>
+      <ViewProperties/>
 
 
     </div>
