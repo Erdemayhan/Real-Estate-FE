@@ -10,7 +10,6 @@ export default function HomePage() {
     return (
         <>
             <NavBar />
-            
             <main>
             <Header />
             <SearchBar />

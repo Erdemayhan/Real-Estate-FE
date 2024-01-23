@@ -14,8 +14,10 @@ export default function SearchBar(){
     const [loading, error, response ] = useAPI(() => getAllProperties());
     const [loading2, error2,response2] = useAPI(() => getPropertyTypes());
 
+    // eslint-disable-next-line no-sequences
     if(error, error2){
         return <div>Something went wrong</div>
+      // eslint-disable-next-line no-sequences
       }if(loading, loading2){
         return <div>Loading...</div>
       }
