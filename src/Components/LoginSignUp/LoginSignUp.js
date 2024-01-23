@@ -5,8 +5,24 @@ import password_icon from "../Assets/password.png";
 import email_icon from "../Assets/email.png";
 import { useState } from "react";
 
+
 const LoginSignUp = () => {
   const [action, setAction] = useState("Sign Up");
+  const [loading, error, response] = useAPI(() => getUsers());
+
+  if (error) {
+    return <div>Error...</div>;
+  }
+  if (loading) {
+    return <div>loading...</div>;
+  }
+  //postmandeki beklediginiz dataya gore distruct ediniz
+  const { users } = response;
+
+  if (!users || users.length === 0) {
+    return <div>No users found</div>;
+  }
+
   return (
     <div className="container">
       <div className="header">
@@ -56,6 +72,20 @@ const LoginSignUp = () => {
         >
           Login
         </div>
+      </div>
+      <div>
+        {users.map((user, index) => {
+          return (
+            <div key={index}>
+              <p>{user.id}</p>
+              <p>{user.username}</p>
+              <p>{user.email}</p>
+              <p>{user.password}</p>
+              <p>{user.userTypeId}</p>
+              <p>{user.createdAt}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
