@@ -1,14 +1,13 @@
 import React from "react";
 import AccountDetails from '../components/accountDetails/accountdetails';
-import LoginSignUp from '../components/LoginSignUp/LoginSignUp';
-
+import NavBar from "../components/navBar/Navbar";
 export default function Profiles() {
     return (
         <>
+            <NavBar />
             <section>
                 <AccountDetails />
             </section>
-            <LoginSignUp />
         </>
     )
 }

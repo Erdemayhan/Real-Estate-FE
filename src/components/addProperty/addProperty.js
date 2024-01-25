@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+
 const AddProperty = () => {   
 
     const [formData, setFormData] = useState({

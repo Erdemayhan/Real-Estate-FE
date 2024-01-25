@@ -7,11 +7,11 @@ import './Navbar.css'
 function NavBar() {
     return (
       <div className='Navbar'>
-        <a href="#logo">
+        <a href="/">
           <FontAwesomeIcon icon={faSignHanging} />
           Real Estate
         </a>
-        <Link className="item" to="/">
+        <Link className="item" to="view-properties">
           View Properties
         </Link>
         <Link to="/add-property" className="item">
