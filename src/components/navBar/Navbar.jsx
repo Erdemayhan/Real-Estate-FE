@@ -11,7 +11,7 @@ function NavBar() {
           <FontAwesomeIcon icon={faSignHanging} />
           Real Estate
         </a>
-        <Link className="item" to="view-properties">
+        <Link className="item" to="/view-properties">
           View Properties
         </Link>
         <Link to="/add-property" className="item">
