@@ -1,190 +1,216 @@
-import { useState } from "react"
+import React from 'react';
+import Heading from '../searchBar/Heading';
+import useAPI from '../../effects/useAPI';
+import getAllProperties from "../../services/getAllProperties";
+import getPropertyTypes from "../../services/getPropertyTypes";
+import getPropertyStatuses from '../../services/getPropertyStatuses';
+
+const AddProperty = () => {
+  const [loading, error, response ] = useAPI(() => getAllProperties());
+  const [loading2, error2,response2] = useAPI(() => getPropertyTypes());
+  const [loading3, error3,response3] = useAPI(() => getPropertyStatuses());
 
 
-const AddProperty = () => {   
+  if(error, error2, error3){
+    return <div>Something went wrong</div>
+  // eslint-disable-next-line no-sequences
+  }if(loading, loading2, loading3){
+    return <div>Loading...</div>
+  }
+  const { properties } = response;
+  const { property_types } = response2
+  const { propertyStatuses } = response3
+  console.log(propertyStatuses)
 
-    const [formData, setFormData] = useState({
-      location: 'Famagusta',
-      priceRange: '500.000',
-      status:'',
-      type: 'apartment',
-      sizeSqMeters: '200',
-      noOfBedrooms: '1',
-      noOfBathrooms: '2',
-      noOfRooms : '7',
-      listedDate: '2023',
-      description: 'A luxury apartment in the heart of Famagusta',
-    })
-  
-    const [formError, setFormError] = useState({}); // Fixed variable name
 
-    const onChangeHandler = (event) => {
-      console.log(event);
-      setFormData(() => ({
-        ...formData,
-        [event.target.name]: event.target.value,
-      }));
-    };
-    
-    const validateForm = () => {
-      let err = {};
-      let isValid = true;
-    
-      if (formData.location === '') {
-        err.location = 'Location is required';
-        isValid = false;
-      }
-      if (formData.priceRange === '') {
-        err.priceRange = 'Price Range is required';
-        isValid = false;
-      }
-      if (formData.status === '') {
-        err.status = 'Status is required';
-        isValid = false;
-      }
-      if (formData.type === '') {
-        err.type = 'Type is required';
-        isValid = false;
-      }
-      if (formData.sizeSquareMeters === '') {
-        err.sizeSquareMeters = 'Size square meters is required';
-        isValid = false;
-      }
-      if (formData.noOfBedrooms === '') {
-        err.noOfBedrooms = 'No. of Bedrooms is required';
-        isValid = false;
-      }
-      if (formData.noOfBathrooms === '') {
-        err.noOfBathrooms = 'No. of Bathrooms is required';
-        isValid = false;
-      }
-      if (formData.noOfRooms === '') {
-        err.noOfRooms = 'No. of Rooms is required';
-        isValid = false;
-      }
-      if (formData.listedDate === '') {
-        err.listedDate = 'Listed date is required';
-        isValid = false;
-      }
-    
-      setFormError({ ...err });
-    
-      if (isValid) {
-        alert('Form submitted');
-      } else {
-        alert('Invalid form');
-      }
-    
-      return isValid;
-    };
-
-  
-    const onSubmitHandler = (event) => {
-        event.preventDefault()
-        console.log("Form Data:", formData)
-        let isValid = validateForm()
-        console.log(isValid)
-      }
   
     return (
       <>
       <div className="PropertyDetails">
       <h1> Add a property </h1>
-        <form onSubmit={onSubmitHandler}>
-          <div className="form-group">
-            <label htmlFor="location" className="form-label">Location</label>
-            <input className="form-control" name="location" onChange={onChangeHandler} value={formData.location} />
-            <span className="non-valid">{formError.location}</span>
-          </div>
-      <div className="form-group">
-          <label htmlFor="priceRange" className="form-label">Price Range (£)</label>
-          <select className="form-select" name="priceRange" onChange={onChangeHandler} value={formData.priceRange}>
-            <option value=""></option>
-            <option value="15.000 - 100.000">15.000 - 100.000</option>
-            <option value="100.000 - 200.000">100.000 - 200.000</option>
-            <option value="300.000 - 500.000">300.000 - 500.000</option>
-          </select>
-          <span className="non-valid">{formError.priceRange}</span>
+        <form>
+        <Heading title="Display yur Property in Our Site" />
+        {/*Works*/}
+        <div className="box">
+            <span>City/Street</span>
+            <select id="cities" className="custom-select" defaultValue="">
+            <option value="" disabled hidden>Pick your city</option>
+            {properties.map((property)=> {
+                return (
+                        <>
+                        <option value={property.location}>{property.location}</option>
+                        </>
+                    )
+                })}
+            </select>
         </div>
-      <div className="form-group">
+
+        {/*Works*/}
+        <div className="box">
+          <span>Price Range</span>
+          <select id="prices" className="custom-select" defaultValue="">
+          <option value="" disabled hidden>Price Range</option>
+          {properties.map((property)=> {
+              return (
+                      <>
+                      <option value={property.price}>{property.price}</option>
+                      </>
+                  )
+              })}
+          </select>
+        </div>
+
+
+
+        
+        {/*Works*/}
+        <div className="box">
+          <span>Property Type</span>
+          <select id="property-types" className="custom-select" defaultValue="">
+          <option value="" disabled hidden>Property Type</option>
+          {property_types.map((property_type, index)=> {
+              return (
+                      <>
+                      <option key={index} value={property_type.propertyType}>{property_type.propertyType}</option>
+                      </>
+                  )
+              })}
+          </select>
+        </div>
+
+
+
+
+
+      
+      <div className="box">
+          <span>Property Status</span>
+          <select id="property-types" className="custom-select" defaultValue="">
+          <option value="" disabled hidden>Property Status</option>
+          {propertyStatuses.map((propertyStatus, index)=> {
+              return (
+                      <>
+                      <option key={index} value={propertyStatus.propertyStatus}>{propertyStatus.propertyStatus}</option>
+                      </>
+                  )
+              })}
+          </select>
+      </div> 
+
+      {/* <div className="form-group">
           <label htmlFor="status" className="form-label">Status</label>
           <div>
             <div>
-              <input type="radio" name="status" value="For Sale" onChange={onChangeHandler} checked={formData.status.indexOf('For Sale') !== -1} />
+              <input type="radio" name="status" value="For Sale"/>
               <label htmlFor="For Sale">For Sale</label>
             </div>
             <div>
-              <input type="radio" name="status" value="For Rent" onChange={onChangeHandler} checked={formData.status.indexOf('For Rent') !== -1} />
+              <input type="radio" name="status" value="For Rent"/>
               <label htmlFor="For Rent">For Rent</label>
             </div>
             <div>
-              <input type="radio" name="status" value="Off the Market" onChange={onChangeHandler} checked={formData.status.indexOf('Off the Market') !== -1} />
+              <input type="radio" name="status" value="Off the Market"/>
               <label htmlFor="Off the Market">Off the Market</label>
             </div>
             <div>
-              <input type="radio" name="status" value="NEW!" onChange={onChangeHandler} checked={formData.status.indexOf('NEW!') !== -1} />
+              <input type="radio" name="status" value="NEW!"/>
               <label htmlFor="NEW!">NEW!</label>
             </div>
           </div>
-          <span className="non-valid">{formError.status}</span>
-          </div>
-      <div className="form-group">
-          <label htmlFor="type" className="form-label">Type</label>
-          <select className="form-select" name="type" onChange={onChangeHandler} value={formData.type}>
-            <option value=""></option>
-            <option value="Apartment">Apartment</option>
-            <option value="House">House</option>
-            <option value="Villa">Villa</option>
-            <option value="Land">Land</option>
-            <option value="Office">Office</option>
-            <option value="Semi-Detached House">Semi-Detached House</option>
-            <option value="Penthouse">Penthouse</option>
-            <option value="Dormitory">Dormitory</option>
+        </div> */}
+
+
+        
+        <div className="box">
+          <span>Property Size</span>
+          <select id="sizeSqMeter" className="custom-select" defaultValue="">
+          <option value="" disabled hidden>Property Size</option>
+          {properties.map((property)=> {
+              return (
+                      <>
+                      <option value={property.sizeSqMeters}>{property.sizeSqMeters}</option>
+                      </>
+                  )
+              })}
           </select>
-          <span className="non-valid">{formError.type}</span>
-      </div>
-      <div className="form-group">
-         <label htmlFor="sizeSquareMeters" className="form-label">Size square meters</label>
-         <input className="form-control" name="sizeSquareMeters" onChange={onChangeHandler} value={formData.sizeSquareMeters} />
-         <span className="non-valid">{formError.sizeSquareMeters}</span>
-     </div>
-      <div className="form-group">
-         <label htmlFor="noOfBedrooms" className="form-label">No. of  bedrooms</label>
-         <input className="form-control" name="noOfBedrooms" onChange={onChangeHandler} value={formData.noOfBedrooms} />
-         <span className="non-valid">{formError.noOfBedrooms}</span>
-     </div>
-    <div className="form-group">
-        <label htmlFor="noOfBathrooms" className="form-label">No. of  bathrooms</label>
-        <input className="form-control" name="noOfBathrooms" onChange={onChangeHandler} value={formData.noOfBathrooms} />
-        <span className="non-valid">{formError.noOfBathrooms}</span>
-     </div>
-    <div className="form-group">
-        <label htmlFor="noOfRooms" className="form-label">No. of  Rooms</label>
-        <input className="form-control" name="noOfRooms" onChange={onChangeHandler} value={formData.noOfRooms} />
-        <span className="non-valid">{formError.noOfRooms}</span>
-     </div>
-      <div className="form-group">
-          <label htmlFor="listedDate" className="form-label">Listed date</label>
-          <select className="form-select" name="listedDate" onChange={onChangeHandler} value={formData.listedDate}>
-            <option value=""></option>
-            <option value="2019">2019</option>
-            <option value="2020 ">2020</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
+        </div>
+    
+
+
+      
+      <div className="box">
+          <span>Number of Bedrooms</span>
+          <select id="Number-of-Bedrooms" className="custom-select" defaultValue="">
+          <option value="" disabled hidden>Number of Bedrooms</option>
+          {properties.map((property)=> {
+              return (
+                      <>
+                      <option value={property.noOfBedrooms}>{property.noOfBedrooms}</option>
+                      </>
+                  )
+              })}
           </select>
-          <span className="non-valid">{formError.listedDate}</span>
-      </div>
+        </div>
+
+
+
+
+    
+    <div className="box">
+        <span>Number of Bathrooms</span>
+        <select id="Number-of-Bathrooms" className="custom-select" defaultValue="">
+        <option value="" disabled hidden>Number of Bathrooms</option>
+        {properties.map((property)=> {
+            return (
+                    <>
+                    <option value={property.noOfBathrooms}>{property.noOfBathrooms}</option>
+                    </>
+                )
+            })}
+        </select>
+    </div>
+
+
+
+    <div className="box">
+        <span>Number of Rooms</span>
+        <select id="Number-of-Rooms" className="custom-select" defaultValue="">
+        <option value="" disabled hidden>Number of Rooms</option>
+        {properties.map((property)=> {
+            return (
+                    <>
+                    <option value={property.noOfRooms}>{property.noOfRooms}</option>
+                    </>
+                )
+            })}
+        </select>
+    </div>
+
+
+
+    <div className="box">
+        <span>Listed Date</span>
+        <select id="Listed-Date" className="custom-select" defaultValue="">
+        <option value="" disabled hidden>Listed Date</option>
+        {properties.map((property)=> {
+            return (
+                    <>
+                    <option value={property.listedDate}>{property.listedDate}</option>
+                    </>
+                )
+            })}
+        </select>
+    </div>
+
+
+
+
       <div className="form-group">
-            <label htmlFor="description" className="form-label">Description</label>
-            <input className="form-control" name="description" onChange={onChangeHandler} value={formData.description} />
-          </div>
-      <div className="form-group">
-            <button className="btn" type="submit" onClick={()=> console.log(formData)} >Add</button>
+            <button className="btn" type="submit" >Add</button>
           </div>
       </form>
       </div>
-       </>
+    </>
     );
   }
 

@@ -4,14 +4,12 @@ import Personal from "./Personal";
 import ChangePassword from "./ChangePassword";
 import SignOut from "./SignOut";
 import DeleteAccount from "./DeleteAccount";
-import AddProperty from "./AddPropery";
-import Favourites from './Favourites';
+
+
 
 function AccountDetails() {
   const tabs = [
     { name: "Personal Details", component: <Personal /> },
-    { name: "Favorites", component: <Favourites /> },
-    { name: "Add Property", component: <AddProperty /> },
     { name: "Change Password", component: <ChangePassword /> },
     { name: "Sign Out", component: <SignOut /> },
     { name: "Delete Account", component: <DeleteAccount /> },

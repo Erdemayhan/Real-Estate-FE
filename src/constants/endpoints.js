@@ -13,5 +13,10 @@ export { properties };
 const Types = {
   getPropertyTypes: () => `/property_types`,
 }
-
 export { Types };
+
+const Status = {
+  getPropertyStatuses: () => `/property_statuses`,
+}
+
+export { Status };
