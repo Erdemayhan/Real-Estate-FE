@@ -78,7 +78,8 @@
 .submit-container{
     display: flex;
     gap: 30px;
-    margin-top: 60px auto;
+    margin-top: 40px auto;
+    
 }
 
 .submit{
@@ -93,7 +94,7 @@
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
-    margin: auto
+    margin: auto;
 }
 
 .gray{

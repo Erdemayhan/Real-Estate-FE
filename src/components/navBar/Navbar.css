@@ -1,8 +1,8 @@
 .Navbar {
-    background-color: rgb(30, 17, 17);
+    background-color: #00A6a6;
     overflow: hidden;
     display: flex;
-    position: fixed; /* Set the navbar to fixed position */
+    position: static; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     justify-content: space-between;
@@ -13,7 +13,7 @@
 
 /* Change color on hover */
 .Navbar a:hover {
-    background-color: #e20707;
+    background-color: #E6D72A;
     color: rgb(0, 0, 0);
 }
 

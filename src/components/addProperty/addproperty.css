@@ -1,15 +1,12 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
-    
-  }
-  .PropertyDetails {
+
+  .PropertyDetails1 {
     width: 600px;
     margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
   }
   
    
@@ -46,8 +43,8 @@ body {
       margin-top: 4px;
     }
     
-    .btn {
-      background-color: #007bff;
+    .bton {
+      background-color: #00a6a0;
       color: #fff;
       padding: 10px 20px;
       border: none;
@@ -55,7 +52,7 @@ body {
       cursor: pointer;
     }
     
-    .btn:hover {
-      background-color: #0056b3;
+    .bton:hover {
+      background-color: #f18d9e;
     }
     

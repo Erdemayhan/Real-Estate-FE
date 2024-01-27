@@ -5,12 +5,12 @@ import './feature.css';
 export default function Features(){
         return (
                 <>
-                <section id="features" title='Our Services'>
+                <div id="features" title='Our Services'>
                     <h2>Features</h2>
                     <ul>
                         {CORE_CONCEPTS.map((conceptItem) => <Feature key={conceptItem.title} {...conceptItem} /> )}
                     </ul>
-                </section>
+                </div>
                 </>
         );
 }

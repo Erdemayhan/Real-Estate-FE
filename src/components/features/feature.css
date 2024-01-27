@@ -1,12 +1,4 @@
-#features, section {
-    width: 60%; /* Adjust this to change the box's width */
-    margin: 0 auto; /* Auto margins to center the box */
-    padding: 2rem;
-    border-radius: 6px;
-    background-color: #00a6a6;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    text-align: center;
-}
+
 
 
 #features {
