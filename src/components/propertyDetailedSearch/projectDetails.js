@@ -1,4 +1,5 @@
 import React from 'react';
+import './projectDetails.css';
 import Heading from '../searchBar/Heading';
 import useAPI from '../../effects/useAPI';
 import getAllProperties from "../../services/getAllProperties";
@@ -158,8 +159,54 @@ const PropertyDetails = () => {
       <div className="form-group">
             <button className="btn" type="submit" >Search</button>
       </div>
-
+        
       </form>
+
+      <div className="container2">
+            <div className="first">
+                <h1>Property Information</h1>
+                <h2>Location</h2> 
+                <p>Famagusta</p>
+                <h2>Price</h2>
+                <p>£ 200,000</p>
+                <h2>Status</h2>
+                <p>For Sale</p>
+                <h2>Type</h2>
+                <p>Apartment</p>
+                <h2>Size square meters</h2>
+                <p>100</p>
+                <h2>No. of bedrooms</h2>
+                <p>2</p>
+                <h2>No. of bathrooms</h2>
+                <p>1</p>
+                <h2>No. of rooms</h2>
+                <p>3</p>
+                <h2>Listed Date</h2>
+                <p>2021-03-01</p>
+            </div>
+            <div className="second">
+                <h1>Property Information</h1>
+                <h2>Location</h2> 
+                <p>Kyrenia</p>
+                <h2>Price</h2>
+                <p>£ 100,000</p>
+                <h2>Status</h2>
+                <p>For Rent</p>
+                <h2>Type</h2>
+                <p>Penthouse</p>
+                <h2>Size square meters</h2>
+                <p>150</p>
+                <h2>No. of bedrooms</h2>
+                <p>1</p>
+                <h2>No. of bathrooms</h2>
+                <p>1</p>
+                <h2>No. of rooms</h2>
+                <p>2</p>
+                <h2>Listed Date</h2>
+                <p>2021-03-01</p>
+            </div>
+      </div>
+
       </div>
 </>
 );
