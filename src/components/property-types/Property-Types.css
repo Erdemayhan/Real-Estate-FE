@@ -3,7 +3,7 @@
   margin: 20px auto; /* Auto margins to center the card, 20px vertical margin to separate it from other components */
   padding: 2rem;
   border-radius: 6px;
-  background-color: transparent;
+  background-color: #00adb5;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Box shadow to give the card a "lifted" effect */
   margin: 4rem auto;
 }
