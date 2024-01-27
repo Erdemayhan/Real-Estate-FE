@@ -1,9 +1,9 @@
 .property-types {
-  width: 60%; /* Adjust this to change the card's width */
+  width: 100%; /* Adjust this to change the card's width */
   margin: 20px auto; /* Auto margins to center the card, 20px vertical margin to separate it from other components */
   padding: 2rem;
   border-radius: 6px;
-  background-color: #00a6a6;
+  background-color: transparent;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Box shadow to give the card a "lifted" effect */
   margin: 4rem auto;
 }
@@ -23,7 +23,7 @@
     border-radius: 5px;
     align-items: center;
     background-color: transparent;
-    color: #e6d72a;
+    color: #ebe7ef;
     font-family: 'Salsa', cursive;
     font-size: 1rem;
     cursor: pointer;
@@ -35,7 +35,7 @@
     color: #000000;
   }
   #types menu button.active {
-    background-color: #e6d72a;
+    background-color: #f18d9e;
     color: #ebe7ef;
   }
   

@@ -1,24 +1,35 @@
-
-.searchbar .container {
-    padding-top: -35%;
+.searchbar{
+    background: transparent;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Salsa', cursive;
   }
+  .searchbar .container1 {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+
 .searchbar h1 {
-    color: #fff;
-    font-size: 60px;
+    color: #E6D72A;
+    font-size: 48px;
     text-align: center;
     font-family: 'Salsa', cursive;
   }
 
 
   .searchbar p {
-    color: #fff;
+    color:transparent ;
     opacity: 0.8;
     text-align: center;
     font-family: 'Salsa', cursive;
     font-size: 40px;
   }
   form {
-    background-color: #00a6a6;
+    background-color: transparent;
     border-radius: 5px;
     margin-top: 20px;
     padding: 0 20px;

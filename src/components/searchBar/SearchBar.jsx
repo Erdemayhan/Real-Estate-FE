@@ -26,8 +26,8 @@ export default function SearchBar(){
     const { property_types } = response2
     return (
         <>
-        <section className="searchbar">
-            <div className="container">
+        <div className="searchbar">
+            <div className="container1">
                 <Heading title="Search for your dream home" />
                 <form className="flex">
                 <div className="box">
@@ -77,7 +77,7 @@ export default function SearchBar(){
                 </button>
                 </form>
                 </div>
-            </section>
+            </div>
         </>
     )
 }

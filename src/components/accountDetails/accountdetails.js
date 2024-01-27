@@ -5,8 +5,6 @@ import ChangePassword from "./ChangePassword";
 import SignOut from "./SignOut";
 import DeleteAccount from "./DeleteAccount";
 
-
-
 function AccountDetails() {
   const tabs = [
     { name: "Personal Details", component: <Personal /> },
@@ -18,9 +16,6 @@ function AccountDetails() {
   return (
     <div>
       <div className="profile-tabs">
-        <div className="header">
-          <div className="text">Account Details</div>
-        </div>
         {tabs.map((tab, index) => {
           return (
             <div

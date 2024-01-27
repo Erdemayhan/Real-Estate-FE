@@ -1,14 +1,12 @@
 .profile-tabs {
     display: flex;
     flex-direction: row;
-    background-color: #00a6a6;
-    width: 1500px;
-    flex-wrap: wrap;
+    overflow: hidden;
+    width: 110%;
     color: black;
     text-align: center;
-    border-radius: 25px;
     justify-content: center;
-    cursor: pointer; 
+   
 }
 
 .header{
@@ -20,11 +18,7 @@
     width: 100%;
 }
 
-.text{
-    font-size: 30px;
-    font-weight: 700;
-    color: wheat;
-} 
+
 
 h1 { font-size: 24px;
     font-weight: bold;
@@ -45,12 +39,13 @@ h1 { font-size: 24px;
 }
 
 .col-2 {
-    flex: 0 0 16.66667%; /* This sets the width to 2 out of 12 columns */
-    max-width: 16.66667%;
+    flex: 1;
+    padding: 0 50px;
+    
   }
   
   /* Apply styles for py-4 class */
   .py-4 {
-    padding-top: 24px; /* You can adjust the value based on your design */
-    padding-bottom: 24px; 
+    padding-top: 12px; /* You can adjust the value based on your design */
+    padding-bottom: 12px; 
   }
