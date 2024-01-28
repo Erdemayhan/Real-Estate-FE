@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./useprofile.css";
 
-
 const UserProfile = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
