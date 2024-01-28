@@ -1,11 +1,15 @@
 .UserProfile {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #00a6a6;
-  }
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #00a6a6;
+  display: flex; /* Add this line */
+  flex-direction: column; /* Add this line */
+  justify-content: center; /* Add this line */
+  align-items: center; /* Add this line */
+}
   
   form {
     display: flex;
@@ -18,7 +22,7 @@
   
   input,
   select {
-    width: 100%;
+    width: 200px;
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
