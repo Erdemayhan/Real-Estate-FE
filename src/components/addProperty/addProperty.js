@@ -25,7 +25,7 @@ const AddProperty = () => {
 
   return (
     <>
-      <div className="PropertyDetails1">
+      <div className="PropertyDetails">
         <form>
           <Heading title="Display yur Property in Our Site" />
           {/*Works*/}

@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    width: 110%;
+    width: 100%;
     color: black;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
    
 }
 
@@ -15,7 +15,7 @@
     align-items: center;
     margin-top: 30px;
     gap: 9px;
-    width: 100%;
+    width: 600px;
 }
 
 
@@ -27,8 +27,10 @@ h1 { font-size: 24px;
 }
 
 .tab {
-   
-    margin-bottom: 10px;
+   flex: 1;
+   padding: 10px;
+   text-align: center;
+   cursor: pointer;
 }
 
 .active-tab {
@@ -38,14 +40,3 @@ h1 { font-size: 24px;
   
 }
 
-.col-2 {
-    flex: 1;
-    padding: 0 50px;
-    
-  }
-  
-  /* Apply styles for py-4 class */
-  .py-4 {
-    padding-top: 12px; /* You can adjust the value based on your design */
-    padding-bottom: 12px; 
-  }

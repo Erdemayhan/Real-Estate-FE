@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./delete.css";
 const DeleteAccount = () => {
   const [confirmation, setConfirmation] = useState("");
 
@@ -14,7 +14,7 @@ const DeleteAccount = () => {
   };
 
   return (
-    <div>
+    <div className="Delete">
       <p>Are you sure you want to delete your account?</p>
       <input
         type="text"

@@ -27,7 +27,7 @@ const PropertyDetails = () => {
       <div className="PropertyDetails">
         <form>
           <Heading title="View The Property You Search" />
-          <div className="form-group">
+          <div className="box">
             <label htmlFor="location" className="form-label">
               Location
             </label>
@@ -48,7 +48,7 @@ const PropertyDetails = () => {
           </div>
 
           {/*Might need new endpoint that would display status except Off the market */}
-          <div className="form-group">
+          <div className="box">
             <label htmlFor="location" className="form-label">
               Status
             </label>
@@ -68,7 +68,7 @@ const PropertyDetails = () => {
             </select>
           </div>
 
-          <div className="form-group">
+          <div className="box">
             <label htmlFor="price" className="form-label">
               Price
             </label>
@@ -86,7 +86,7 @@ const PropertyDetails = () => {
             </select>
           </div>
 
-          <div className="form-group">
+          <div className="box">
             <label htmlFor="price" className="form-label">
               Property Type
             </label>
@@ -106,7 +106,7 @@ const PropertyDetails = () => {
             </select>
           </div>
 
-          <div className="form-group">
+          <div className="box">
             <label htmlFor="price" className="form-label">
               Property Size
             </label>
@@ -126,7 +126,7 @@ const PropertyDetails = () => {
             </select>
           </div>
 
-          <div className="form-group">
+          <div className="box">
             <label htmlFor="price" className="form-label">
               Number of Bedrooms
             </label>
@@ -146,7 +146,7 @@ const PropertyDetails = () => {
             </select>
           </div>
 
-          <div className="form-group">
+          <div className="box">
             <label htmlFor="price" className="form-label">
               Number of Bathrooms
             </label>
@@ -166,7 +166,7 @@ const PropertyDetails = () => {
             </select>
           </div>
 
-          <div className="form-group">
+          <div className="box">
             <label htmlFor="price" className="form-label">
               Number of Rooms
             </label>
@@ -186,7 +186,7 @@ const PropertyDetails = () => {
             </select>
           </div>
 
-          <div className="form-group">
+          <div className="box">
             <label htmlFor="price" className="form-label">
               Listed Date
             </label>
@@ -206,8 +206,8 @@ const PropertyDetails = () => {
             </select>
           </div>
 
-          <div className="form-group">
-            <button className="btn1" type="submit">
+          <div className="box">
+            <button className="btn" type="submit">
               Search
             </button>
           </div>
@@ -215,7 +215,7 @@ const PropertyDetails = () => {
 
         <div className="container2 ">
           <h1>Property Information</h1>
-          <div className="first col-2">
+          <div className="first">
             <p>Location : Famagusta</p>
             <p>Price : 200,000 </p>
             <p>Status : For Sale</p>
@@ -229,7 +229,7 @@ const PropertyDetails = () => {
         </div>
         <div className="container3 ">
           <h1>Property Information</h1>
-          <div className="second col-2">
+          <div className="second">
             <p>Location : Kyrenia</p>
             <p>Price : 150,000 </p>
             <p>Status : For Rent</p>
@@ -243,7 +243,7 @@ const PropertyDetails = () => {
         </div>
         <div className="container4 ">
           <h1>Property Information</h1>
-          <div className="third col-2 ">
+          <div className="third">
             <p>Location : Omorfou</p>
             <p>Price : 100,000 </p>
             <p>Status : NEW!</p>
