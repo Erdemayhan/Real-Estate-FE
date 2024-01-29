@@ -7,7 +7,7 @@ header img {
 header h1 {
     margin: 0;
     font-size: 6rem;
-    background: #00a6a6;
+    background: #0dc8c8;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
@@ -16,7 +16,7 @@ header h1 {
 header p {
     margin: 0;
     font-size: 1.50rem;
-    color: #98DBC6;
+    color: #57f7c4;
     font-weight: bold;
 }
 
