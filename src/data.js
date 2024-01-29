@@ -1,12 +1,12 @@
 import { faHouseChimney, faPhone, faHouseUser, faUserPlus } from '@fortawesome/free-solid-svg-icons';
-import apartmentImg from '../src/assets/PropertyTypes/apartment.png'
-import houseImg from '../src/assets/PropertyTypes/house.png'
-import villaImg from './assets/PropertyTypes/villa.png'
+import apartmentImg from '../src/assets/PropertyTypes/penthouse.png'
+import houseImg from '../src/assets/PropertyTypes/h2.png'
+import villaImg from './assets/PropertyTypes/h6.png'
 import landImg from './assets/PropertyTypes/land.png'
-import officeImg from './assets/PropertyTypes/office.png'
-import semiDetachedHouseImg from './assets/PropertyTypes/semiDetachedHouse.png'
-import pentHouseImg from './assets/PropertyTypes/penthouse.png'
-import dormitoryImg from './assets/PropertyTypes/dormitory.png'
+import officeImg from './assets/PropertyTypes/h4.png'
+import semiDetachedHouseImg from './assets/PropertyTypes/h8.png'
+import pentHouseImg from './assets/PropertyTypes/h5.png'
+import dormitoryImg from './assets/PropertyTypes/h7.png'
 
 
 export const CORE_CONCEPTS = [

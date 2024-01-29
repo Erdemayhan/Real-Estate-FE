@@ -1,8 +1,11 @@
 const user = {
   getUsers: () => `/users`,
+  deleteUserById: () => `/user/:userId`,
 };
 
 export { user };
+
+
 
 const properties = {
   getAllProperties: () => `/properties`,
