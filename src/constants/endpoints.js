@@ -7,6 +7,7 @@ export { user };
 
 const properties = {
   getAllProperties: () => `/properties`,
+  getLocations: () => `/locations`,
 };
 
 export { properties };
@@ -22,26 +23,25 @@ const Status = {
 
 export { Status };
 
-const Filter = {
-  getFilterProperty: ({
-    location,
-    price,
-    propertyTypes,
-    propertyStatuses,
-    rooms,
-    bedrooms,
-    bathrooms,
-    sizeSqMeters,
-    listedDate
-  }) =>
-    `/properties/filter/${location}/${price}/${propertyTypes}/${propertyStatuses}/${rooms}/${bedrooms}/${bathrooms}/${sizeSqMeters}/${listedDate}`,
+// const Filter = {
+//   getFilterProperty: ({
+//     location,
+//     price,
+//     propertyTypes,
+//     propertyStatuses,
+//     rooms,
+//     bedrooms,
+//     bathrooms,
+//     sizeSqMeters,
+//     listedDate,
+//   }) =>
+//     `/properties/filter/${location}/${price}/${propertyTypes}/${propertyStatuses}/${rooms}/${bedrooms}/${bathrooms}/${sizeSqMeters}/${listedDate}`,
+// };
+
+// export { Filter };
+
+const Location = {
+  getPropertyByLocation: ({ location }) => `/property/${location}`,
 };
 
-export { Filter };
-
-const location =  
-{
-  getPropertyByLocation: () => `/properties`,
-};
-
-export { location };
+export { Location };
