@@ -5,6 +5,7 @@ import useAPI from "../../effects/useAPI";
 import getAllProperties from "../../services/getAllProperties";
 import getPropertyTypes from "../../services/getPropertyTypes";
 import getPropertyStatuses from "../../services/getPropertyStatuses";
+// import getFilterProperty from "../../services/getFilterProperty";
 
 const PropertyDetails = () => {
   const [loading, error, response] = useAPI(() => getAllProperties());
@@ -22,10 +23,28 @@ const PropertyDetails = () => {
   const { property_types } = response2;
   const { propertyStatuses } = response3;
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    // try {
+    //   const response = await getFilterProperty({
+    //     location,
+    //     price,
+    //     propertyTypes,
+    //     propertyStatuses: propertyStatus,
+    //     rooms,
+    //     bedrooms,
+    //     bathrooms,
+    //     sizeSqMeters,
+    //   });
+    // } catch (error) {
+    //   console.log(error);
+    // }
+  };
+
   return (
     <>
       <div className="PropertyDetails">
-        <form>
+        <form onSubmit={handleSubmit}>
           <Heading title="View The Property You Search" />
           <div className="box">
             <label htmlFor="location" className="form-label">
