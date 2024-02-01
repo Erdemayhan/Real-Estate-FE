@@ -32,8 +32,16 @@ const Filter = {
     bedrooms,
     bathrooms,
     sizeSqMeters,
+    listedDate
   }) =>
-    `/properties/filter/${location}/${price}/${propertyTypes}/${propertyStatuses}/${rooms}/${bedrooms}/${bathrooms}/${sizeSqMeters}`,
+    `/properties/filter/${location}/${price}/${propertyTypes}/${propertyStatuses}/${rooms}/${bedrooms}/${bathrooms}/${sizeSqMeters}/${listedDate}`,
 };
 
 export { Filter };
+
+const location =  
+{
+  getPropertyByLocation: () => `/properties`,
+};
+
+export { location };
