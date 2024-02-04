@@ -1,59 +1,73 @@
 import React from "react";
 import "./LoginSignUp.css";
 import { useState } from "react";
+import useAPI from "../../effects/useAPI";
+import postLogin from '../../services/postLogin';
 
 const LoginSignUp = () => {
   const [action, setAction] = useState("Sign Up");
+
+    const handleClick = () => {
+      if (action === "Sign Up") {
+        setAction("Log In");
+      } else {
+        setAction("Sign Up");
+      }
+    };
+  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // Call postLogin with email and password
+  const [loadingLogin, errorLogin, responseLogin] = useAPI(() =>
+    postLogin({email, password})
+  );
+
+  if (errorLogin) {
+    return <div>Something went wrong</div>;
+  }
+  if (loadingLogin) {
+    return <div>Loading...</div>;
+  }
+  
+const { Login } = responseLogin;
+console.log(Login);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault(); // Prevent the form from refreshing the page
+
+    try {
+      const response = await postLogin(email, password);
+      setEmail(response.data.login.email); // Set email
+      setPassword(response.data.login.password); // Set password
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
-    <div className="container">
-      <div className="header">
-        <div className="text">{action}</div>
-        <div className="underline"></div>
+    <form onSubmit={handleSubmit}> {/* Call handleSubmit when the form is submitted */}
+      {/* ... */}
+      <div className="input">
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={e => setEmail(e.target.value)} // Update email when the user types into the input field
+        />
       </div>
-      <div className="inputs">
-        {" "}
-        {action === "Login" ? (
-          <div></div>
-        ) : (
-          <div className="input">
-            <input type="username" placeholder="Username" />{" "}
-          </div>
-        )}
-        <div className="input">
-         {/*FONTAWESOME IMG HERE*/ }
-          <input type="email" placeholder="Email" />{" "}
-        </div>
-        <div className="input">
-          {/*FONTAWESOME IMG HERE*/ }
-          <input type="password" placeholder="Password" />{" "}
-        </div>
+      <div className="input">
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={e => setPassword(e.target.value)} // Update password when the user types into the input field
+        />
       </div>
-      {action === "Sign Up" ? (
-        <div></div>
-      ) : (
-        <div className="forgot-password">
-          Forget your password?<span>Click Here!</span>
-        </div>
-      )}
-      <div className="submit-container">
-        <div
-          className={action === "Login" ? "submit gray" : "submit"}
-          onClick={() => {
-            setAction("Sign Up");
-          }}
-        >
-          Sign Up
-        </div>
-        <div
-          className={action === "Sign Up" ? "submit gray" : "submit"}
-          onClick={() => {
-            setAction("Login");
-          }}
-        >
-          Login
-        </div>
-      </div>
+     <div>
+      <button onClick={handleClick}>{action}</button>
     </div>
+    </form>
   );
 };
 

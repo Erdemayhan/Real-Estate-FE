@@ -45,3 +45,10 @@ const Location = {
 };
 
 export { Location };
+
+const login = { 
+  postLogin: ({
+    email : email, password : password}) => `/login (${email}, ${password})`,
+};
+
+export { login };
