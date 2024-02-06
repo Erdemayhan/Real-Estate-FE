@@ -20,11 +20,11 @@ const LoginSignUp = () => {
           </div>
         )}
         <div className="input">
-         {/*FONTAWESOME IMG HERE*/ }
+          {/*FONTAWESOME IMG HERE*/}
           <input type="email" placeholder="Email" />{" "}
         </div>
         <div className="input">
-          {/*FONTAWESOME IMG HERE*/ }
+          {/*FONTAWESOME IMG HERE*/}
           <input type="password" placeholder="Password" />{" "}
         </div>
       </div>
