@@ -4,56 +4,49 @@ import { useState } from "react";
 import useAPI from "../../effects/useAPI";
 import postLogin from '../../services/postLogin';
 
+import { useNavigate } from "react-router-dom";
+
 const LoginSignUp = () => {
   const [action, setAction] = useState("Sign Up");
-
-    const handleClick = () => {
-      if (action === "Sign Up") {
-        setAction("Log In");
-      } else {
-        setAction("Sign Up");
-      }
-    };
+  const navigate = useNavigate();
   
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+ const [loginFail, setLoginFail] = useState(false);
 
-  // Call postLogin with email and password
-  const [loadingLogin, errorLogin, responseLogin] = useAPI(() =>
-    postLogin({email, password})
-  );
 
-  if (errorLogin) {
-    return <div>Something went wrong</div>;
-  }
-  if (loadingLogin) {
-    return <div>Loading...</div>;
-  }
-  
-const { Login } = responseLogin;
-console.log(Login);
+
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent the form from refreshing the page
+    event.preventDefault(); 
+    setLoginFail(false);
 
+    console.log('Email:', email);
+    console.log('Password:', password);
+  
     try {
-      const response = await postLogin(email, password);
-      setEmail(response.data.login.email); // Set email
-      setPassword(response.data.login.password); // Set password
+      const response = await postLogin({email, password});
+      console.log('Response:', response.data.accessToken);
+      localStorage.setItem('token', response.data.accessToken);
+      navigate('/');
+      // jwt token ı kaydet
     } catch (error) {
+      setLoginFail(true);
+//      alert('Invalid email or password');
       console.log(error);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}> {/* Call handleSubmit when the form is submitted */}
+    <form onSubmit={handleSubmit}> 
+    {loginFail && <div className="error">Invalid email or password</div>}
       {/* ... */}
       <div className="input">
         <input
           type="email"
           placeholder="Email"
           value={email}
-          onChange={e => setEmail(e.target.value)} // Update email when the user types into the input field
+          onChange={e => setEmail(e.target.value)} 
         />
       </div>
       <div className="input">
@@ -61,13 +54,14 @@ console.log(Login);
           type="password"
           placeholder="Password"
           value={password}
-          onChange={e => setPassword(e.target.value)} // Update password when the user types into the input field
+          onChange={e => setPassword(e.target.value)} 
         />
       </div>
      <div>
-      <button onClick={handleClick}>{action}</button>
+      <button onClick={handleSubmit}>{action}</button>
     </div>
     </form>
+
   );
 };
 
