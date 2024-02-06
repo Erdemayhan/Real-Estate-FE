@@ -2,7 +2,7 @@ import React from "react";
 import "./LoginSignUp.css";
 import { useState } from "react";
 import useAPI from "../../effects/useAPI";
-import postLogin from '../../services/postLogin';
+import postLogin from "../../services/postLogin";
 
 import { useNavigate } from "react-router-dom";
 
@@ -13,7 +13,6 @@ const LoginSignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
  const [loginFail, setLoginFail] = useState(false);
-
 
 
 
