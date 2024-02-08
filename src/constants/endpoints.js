@@ -51,3 +51,24 @@ const login = {
 };
 
 export { login };
+
+
+
+const deleteUser = {  
+  deleteUserById: () => `/user/:userId`,
+};
+
+export { deleteUser };
+
+const patchPassword = {
+  patchAllPasswordsFromUsers: () => `/users/newPassword/:userId`,
+};
+
+export { patchPassword };
+
+
+const register = {
+  postUser: () => `/register`,
+};
+
+export { register };

@@ -1,51 +1,26 @@
 import React, { useState } from "react";
 import "./changePassword.css";
+import { useNavigate } from "react-router-dom";
+import patchAllPasswordsFromUsers from "../../services/patchAllPasswordsFromUsers";
 
 const ChangePassword = () => {
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Perform password change logic, e.g., make an API request
-    // Update the following with your actual API endpoint and logic
-
-    // Dummy API endpoint
-    const apiUrl = "https://your-api.com/change-password";
-
-    // Dummy user ID, replace with your authentication logic
-    const userId = "user123";
-
-    // Dummy payload
-    const data = {
-      userId,
-      currentPassword,
-      newPassword,
+    const handleSubmit = async (event) => {
+      event.preventDefault(); 
+    
+      try {
+        const response = await patchAllPasswordsFromUsers();
+        navigate('/');
+      } catch (error) {
+        console.log(error);
+      }
     };
 
-    // Make API request
-    fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        // Include any authentication headers if needed
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        // Handle API response
-        setMessage(result.message);
-        // You may want to redirect the user or perform other actions here
-      })
-      .catch((error) => {
-        // Handle errors
-        console.error("Error changing password:", error);
-      });
-  };
 
   return (
     <div className="Change">

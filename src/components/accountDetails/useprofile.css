@@ -4,7 +4,7 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #00a6a6;
+  background-color: transparent;
   display: flex; /* Add this line */
   flex-direction: column; /* Add this line */
   justify-content: center; /* Add this line */
@@ -45,4 +45,5 @@
   select {
     background-color: #f2f2f2;
   }
+ 
   

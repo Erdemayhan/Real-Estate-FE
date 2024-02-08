@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage.jsx";
 import Profiles from "./pages/Profiles.jsx";
 import ViewProperties from "./pages/ViewProperties.jsx";
 import SignIn from "./pages/SignIn.jsx";
+import Register from "./pages/register.jsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/add-property" element={<AddAProperty />} />
           <Route path="/profile-page" element={<Profiles />} />
           <Route path="/Sign-In" element={<SignIn />} />
+          <Route path="/register" element={<Register/>} />
           {/*make a component for page not found, match its path to * */}
         </Routes>
 

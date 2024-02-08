@@ -23,6 +23,9 @@ function NavBar() {
         <Link to="/Sign-In" className="item2">
         <FontAwesomeIcon icon={faRightToBracket} />Sign in
         </Link>
+        <Link to="/Register" className="item2">
+        <FontAwesomeIcon icon={faRightToBracket} />Register
+        </Link>
       </div>
     )
   }
