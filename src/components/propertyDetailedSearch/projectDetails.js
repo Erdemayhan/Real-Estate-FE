@@ -33,12 +33,12 @@ const PropertyDetails = () => {
   };
   return (
     <>
-      <Heading title="View The Property You Search" />
+      <Heading className = "project-heading" title="View The Property You Search" />
       <div className="box">
         <label htmlFor="location" className="form-label">
           Location
         </label>
-        <select value={location} onChange={(e) => setLocation(e.target.value)}>
+        <select className = "dropdown" value={location} onChange={(e) => setLocation(e.target.value)}>
           {locations.map((property) => {
             return (
               <option value={property.location}>{property.location}</option>

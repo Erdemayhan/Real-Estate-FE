@@ -4,7 +4,7 @@ import { faSignHanging, faRightToBracket } from "@fortawesome/free-solid-svg-ico
 import { Link } from "react-router-dom";
 import './Navbar.css'
 
-function NavBar() {
+  function NavBar() {
     return (
       <div className='Navbar'>
         <a href="/">
@@ -21,13 +21,14 @@ function NavBar() {
           Profile
         </Link>
         <Link to="/Sign-In" className="item2">
-        <FontAwesomeIcon icon={faRightToBracket} />Sign in
+        <FontAwesomeIcon icon={faRightToBracket} />LogIn
         </Link>
         <Link to="/Register" className="item2">
-        <FontAwesomeIcon icon={faRightToBracket} />Register
+        <FontAwesomeIcon icon={faRightToBracket} />SignUp
         </Link>
       </div>
     )
   }
   
-  export default NavBar
+  
+  export default NavBar;

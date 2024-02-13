@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
  const LoginSignUp = () => {
-   const [action, setAction] = useState("Sign Up");
+   const [action, setAction] = useState("Log In");
    const navigate = useNavigate();
   
    const [email, setEmail] = useState("");
@@ -36,7 +36,7 @@ import { useNavigate } from "react-router-dom";
    };
 
    return (
-     <form onSubmit={handleSubmit}> 
+     <form  class="login-form" onSubmit={handleSubmit}> 
      {loginFail && <div className="error">Invalid email or password</div>}
        {/* ... */}
        <div className="input">

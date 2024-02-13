@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./useprofile.css";
-
+import { useNavigate } from 'react-router-dom';
 
 const UserProfile = () => {
   const [username, setUsername] = useState("");
@@ -8,6 +8,7 @@ const UserProfile = () => {
   const [profilePicture, setProfilePicture] = useState(null);
   const [userType, setUserType] = useState("user"); // Default to "user", but you can set it to "agent" if needed
   const [createdDate, setCreatedDate] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Set the created date when the component is mounted (initialized)
@@ -79,7 +80,7 @@ const UserProfile = () => {
         </label>
         <br />
         <p>Created Date: {createdDate}</p>
-        <button type="submit">Save Profile</button>
+        <button onClick={() => navigate('/')} type="submit">Save Profile</button>
       </form>
     </div>
   );

@@ -1,5 +1,4 @@
 
-
 .PropertyDetails {
   width: 600px;
   margin: auto;
@@ -8,6 +7,11 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
+}
+
+.project-heading {
+  font-size: 3.5em; /* Adjust as needed for bigger size */
+  text-align: center; /* Centers the text */
 }
 
   .form-group {

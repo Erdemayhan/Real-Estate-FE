@@ -16,6 +16,7 @@ const ChangePassword = () => {
       try {
         const response = await patchAllPasswordsFromUsers();
         navigate('/');
+        console.log('Response:', response.data);
       } catch (error) {
         console.log(error);
       }

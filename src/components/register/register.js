@@ -9,14 +9,13 @@ const Register = () => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState(1);
-    const [userTypeId, setUserTypeId] = useState("");
     const [registerFail, setRegisterFail] = useState(false);
     
     const handleSubmit = async (event) => {
         event.preventDefault();
         setRegisterFail(false);
         try {
-        const response = await postUser({ username, email, password, userTypeId });
+        const response = await postUser({ username, email, password });
         console.log('Response:', response.data);
         navigate('/');
         } catch (error) {

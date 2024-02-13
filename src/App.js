@@ -4,8 +4,8 @@ import AddAProperty from "./pages/AddAProperty.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import Profiles from "./pages/Profiles.jsx";
 import ViewProperties from "./pages/ViewProperties.jsx";
-import SignIn from "./pages/SignIn.jsx";
 import Register from "./pages/register.jsx";
+import SignIn from "./pages/SignIn.jsx";
 
 function App() {
 

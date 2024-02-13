@@ -6,13 +6,15 @@ import { faCircleDot } from "@fortawesome/free-solid-svg-icons";
 import useAPI from "../../effects/useAPI";
 import getAllProperties from "../../services/getAllProperties";
 import getPropertyTypes from "../../services/getPropertyTypes";
-
+import { useNavigate } from 'react-router-dom';
 
 
 
 export default function SearchBar(){
+    
     const [loading, error, response ] = useAPI(() => getAllProperties());
     const [loading2, error2,response2] = useAPI(() => getPropertyTypes());
+    const navigate = useNavigate();
 
     // eslint-disable-next-line no-sequences
     if(error, error2){
@@ -72,7 +74,7 @@ export default function SearchBar(){
                     </select>
                 </div>
 
-                <button className="btn">
+                <button className="btn"  onClick={() => navigate('/view-properties')} >
                 <FontAwesomeIcon icon={faCircleDot} style={{ marginRight: '10px' }} />Search
                 </button>
                 </form>
