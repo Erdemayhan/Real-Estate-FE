@@ -71,7 +71,7 @@ const UserProfile = () => {
         <label>
           User Type:
           <select value={userType} onChange={handleUserTypeChange}>
-            <option value="admşn">Admin</option>
+            <option value="admin">Admin</option>
             <option value="user">User</option>
             <option value="agent">Agent</option>
           </select>

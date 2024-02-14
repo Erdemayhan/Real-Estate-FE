@@ -1,17 +1,17 @@
 import React from "react";
 import "./LoginSignUp.css";
 import { useState } from "react";
-import postLogin from "../../services/postLogin";
+import postuserById from "../../services/postUserById";
 import { useNavigate } from "react-router-dom";
 
-const LoginSignUp = () => {
+const SignUp = () => {
   const [action, setAction] = useState("Sign Up");
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginFail, setLoginFail] = useState(false);
 
-  const handleSubmit = async (event) => {
+  const handleSignOut = async (event) => {
     event.preventDefault();
     setLoginFail(false);
 
@@ -19,7 +19,7 @@ const LoginSignUp = () => {
     console.log("Password:", password);
 
     try {
-      const response = await postLogin({ email, password });
+      const response = await postuserById({ email, password });
       console.log("Response:", response.data.accessToken);
       localStorage.setItem("token", response.data.accessToken);
       navigate("/");
@@ -35,8 +35,8 @@ const LoginSignUp = () => {
         <div className="text">{action}</div>
         <div className="underline"></div>
       </div>
-      <form className="inputs" onSubmit={handleSubmit}>
-        {action === "Login" ? null : (
+      <form className="inputs" onSubmit={handleSignOut}>
+        {action === "Sign Up" ? null : (
           <div className="input">
             <input type="username" placeholder="Username" />{" "}
           </div>
@@ -79,4 +79,4 @@ const LoginSignUp = () => {
   );
 };
 
-export default LoginSignUp;
+export default SignUp;

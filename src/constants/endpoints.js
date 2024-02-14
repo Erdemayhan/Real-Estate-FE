@@ -26,3 +26,9 @@ const Login = {
 };
 
 export { Login };
+
+const SignUp = {
+  postUserbyId: () => `/users/register`,
+};
+
+export { SignUp };
