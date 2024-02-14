@@ -1,0 +1,36 @@
+
+
+
+form, .Register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px; /* Increase this value to make the corners more rounded */
+    gap: 10px;
+    padding-top: 150px;
+}
+
+
+
+.Register .input {
+    background-color: #f1687f; /* Soft red background color */
+    border-radius: 20px; /* Rounded corners */
+    border: none; /* Remove default border */
+    padding: 10px; /* Add some padding */
+    align-items: center;
+    justify-content: center
+}
+
+
+  button, .RegisterBut {
+    padding: 10px;
+    width: 150px;
+    background-color: #00a6a6;
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Increase this value to make the corners more rounded */
+    cursor: pointer;
+    display: block; /* Add this line to make the button a block element */
+    margin: auto; /* Add this line to center the button */
+}

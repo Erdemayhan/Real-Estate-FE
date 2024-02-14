@@ -10,22 +10,21 @@ const ChangePassword = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-    const handleSubmit = async (event) => {
-      event.preventDefault(); 
-    
-      try {
-        const response = await patchAllPasswordsFromUsers();
-        navigate('/');
-        console.log('Response:', response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
+    try {
+      const response = await patchAllPasswordsFromUsers();
+      navigate("/");
+      console.log("Response:", response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
-    <div className="Change">
-      <form onSubmit={handleSubmit}>
+    <div>
+      <form className="Change" onSubmit={handleSubmit}>
         <label>
           Current Password:
           <input
