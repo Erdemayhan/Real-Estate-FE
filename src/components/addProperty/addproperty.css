@@ -56,3 +56,8 @@
       background-color: #f18d9e;
     }
     
+    form .box select.custom-select {
+      width: 500px; /* The select element will have a fixed width of 300px */
+      background-color: #f0f0f0; /* The select element will have a light gray background */
+      font-size: 16px; /* The text inside the select element will be 16px */
+    }

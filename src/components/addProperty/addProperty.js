@@ -5,11 +5,14 @@ import useAPI from "../../effects/useAPI";
 import getAllProperties from "../../services/getAllProperties";
 import getPropertyTypes from "../../services/getPropertyTypes";
 import getPropertyStatuses from "../../services/getPropertyStatuses";
+import { useNavigate } from 'react-router-dom';
+
 
 const AddProperty = () => {
   const [loading, error, response] = useAPI(() => getAllProperties());
   const [loading2, error2, response2] = useAPI(() => getPropertyTypes());
   const [loading3, error3, response3] = useAPI(() => getPropertyStatuses());
+  const navigate = useNavigate();
 
   if ((error, error2, error3)) {
     return <div>Something went wrong</div>;
@@ -27,7 +30,7 @@ const AddProperty = () => {
     <>
       <div className="PropertyDetails">
         <form>
-          <Heading title="Display yur Property in Our Site" />
+          <Heading title="Display your Property in Our Site" />
           {/*Works*/}
           <div className="box">
             <span>City/Street</span>
@@ -234,7 +237,7 @@ const AddProperty = () => {
           </div>
 
           <div className="form-group">
-            <button className="bton" type="submit">
+            <button onClick={() => navigate('/')} className="bton" type="submit">
               Add
             </button>
           </div>

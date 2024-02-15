@@ -7,15 +7,13 @@ const getRandomDescription = (max) => {
     return Math.floor(Math.random() * (max + 1))
 }
 
-export default function Header(){
-    const description = randomDescriptions[getRandomDescription(2)]
-    return (
-        <header>
-        <img src={logo} alt="logo" />
-        <h1>Estate Cyprus</h1>
-        <p>
-          {description}
-        </p>
-      </header>
-    )
+export default function Header() {
+  const description = randomDescriptions[getRandomDescription(2)];
+  return (
+    <header style={{ textAlign: "center" }}>
+      <img src={logo} alt="logo" style={{ display: "block", margin: "0 auto" }} />
+      <h1>Estate Cyprus</h1>
+      <p>{description}</p>
+    </header>
+  );
 }

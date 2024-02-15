@@ -4,6 +4,8 @@ header img {
     margin-left: 850px;
     align-items: center;
     justify-content: center;
+    display: flex;
+
 }
 
 header h1 {
@@ -22,4 +24,16 @@ header p {
     font-weight: bold;
 }
 
+header .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
 
+.center-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* This makes the .center-logo div take up the full width of the header */
+  }
