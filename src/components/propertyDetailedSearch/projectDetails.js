@@ -33,28 +33,30 @@ const PropertyDetails = () => {
   };
   return (
     <>
-      <Heading className = "project-heading" title="View The Property You Search" />
-      <div className="box">
+      <Heading title="View The Property You Search" />
+      <div className="SearchBox">
         <label htmlFor="location" className="form-label">
-          Location
+        <Heading title="Locations" />
         </label>
         <select className = "dropdown" value={location} onChange={(e) => setLocation(e.target.value)}>
+        <option value="" disabled hidden>Pick your city</option>
           {locations.map((property) => {
             return (
               <option value={property.location}>{property.location}</option>
             );
           })}
         </select>
-      </div>
-      <div className="box">
         <button className="btn" type="button" onClick={() => handleSubmit()}>
           Search
         </button>
       </div>
-      <div className="container 2">
+
+
+
+      <div className="SearchResultBox">
         {propertyResults.map((property) => (
-          <div key={property.id} className="propertyContainer">
-            <h1>Property Information</h1>
+          <div key={property.id} className="PropertyResultBox">
+            <Heading title="Search Results" />
             <div className="first">
               <p>Location : {property.location} </p>
               <p>Price : {property.price}</p>

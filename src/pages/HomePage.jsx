@@ -4,7 +4,7 @@ import Header from "../components/header/Header";
 import NavBar from "../components/navBar/Navbar";
 import PropertyTypes from "../components/property-types/PropertyTypes";
 import SearchBar from "../components/searchBar/SearchBar";
-import './homePage.css'
+
 
 export default function HomePage() {
     return (
@@ -12,8 +12,8 @@ export default function HomePage() {
             <NavBar />
             <main>
             <Header />
-            <SearchBar />
             </main>
+            <SearchBar />
             <Features />
             <PropertyTypes />
         </>

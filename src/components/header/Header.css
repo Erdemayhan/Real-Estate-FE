@@ -1,7 +1,9 @@
 header img {
-    height: 10rem;
-    width: 10rem;
-    object-fit: cover;
+    height: 11rem;
+    width: 11rem;
+    margin-left: 850px;
+    align-items: center;
+    justify-content: center;
 }
 
 header h1 {

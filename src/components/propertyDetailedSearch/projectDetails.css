@@ -1,94 +1,73 @@
-
-.PropertyDetails {
-  width: 600px;
+.SearchBox {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
   margin: auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+  background-color: #F18D9E;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-.project-heading {
-  font-size: 3.5em; /* Adjust as needed for bigger size */
-  text-align: center; /* Centers the text */
+.first p {
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
 }
 
-  .form-group {
-    margin-bottom: 20px; 
-  }
-  
-  .form-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .form-select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .non-valid {
-    color: red;
-    font-size: 12px;
-    margin-top: 4px;
-  }
-  
-  .bton {
-    background-color: #00a6a0;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .bton:hover {
-    background-color: #f18d9e;
-  }
-
-
-
-.container2 {
-    border: 2px solid #dedede;
-    background-color: #00a6a0;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-  }
-  .first, .second, .third {
-    flex: 0 0 calc(100% / 6); /* 2 out of 12 columns */
-    max-width: calc(100% / 6); /* 2 out of 12 columns */
+.dropdown {
+  width: 100%;
+  margin-bottom: 10px;
 }
+
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background-color:#00a6a6; /* Changes all the button colors in other parts of the webpage */
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #E6D72A;
+}
+
+.SearchResultBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.PropertyResultBox {
+  background-color: #F18D9E;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 30px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+
+.PropertyResultBox Heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+
   
-  .container3 {
-    border: 2px solid #dedede;
-    background-color: #00a6a0;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-    
-  }
-  .container4 {
-    border: 2px solid #dedede;
-    background-color: #00a6a0;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-    height: fit-content;
-  }
+
 
  
 

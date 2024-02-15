@@ -36,7 +36,6 @@ const LoginSignUp = () => {
   return (
     <form class="login-form" onSubmit={handleSubmit}>
       {loginFail && <div className="error">Invalid email or password</div>}
-      {/* ... */}
       <Heading title="Login" />
       <div className="input">
         <input

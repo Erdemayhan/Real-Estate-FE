@@ -29,10 +29,9 @@ export default function SearchBar(){
     return (
         <>
         <div className="searchbar">
-            <div className="container1">
-                <Heading title="Search for your dream home" />
+            <div className="container">
                 <form className="flex">
-                <div className="box">
+                <Heading title="Search for your dream home" />
                     <span>City/Street</span>
                     <select id="cities" className="custom-select" defaultValue="">
                     <option value="" disabled hidden>Pick your city</option>
@@ -44,9 +43,8 @@ export default function SearchBar(){
                             )
                         })}
                     </select>
-                </div>
 
-                <div className="box">
+                
                     <span>Property Type</span>
                     <select id="property-types" className="custom-select" defaultValue="">
                     <option value="" disabled hidden>Property Type</option>
@@ -58,9 +56,8 @@ export default function SearchBar(){
                             )
                         })}
                     </select>
-                </div>
+        
 
-                <div className="box">
                     <span>Price Range</span>
                     <select id="prices" className="custom-select" defaultValue="">
                     <option value="" disabled hidden>Price Range</option>
@@ -72,7 +69,7 @@ export default function SearchBar(){
                             )
                         })}
                     </select>
-                </div>
+        
 
                 <button className="btn"  onClick={() => navigate('/view-properties')} >
                 <FontAwesomeIcon icon={faCircleDot} style={{ marginRight: '10px' }} />Search

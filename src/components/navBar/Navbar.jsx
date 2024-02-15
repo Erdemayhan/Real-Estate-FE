@@ -9,7 +9,7 @@ import './Navbar.css'
       <div className='Navbar'>
         <a href="/">
           <FontAwesomeIcon icon={faSignHanging} />
-          Real Estate
+          Estate Cyprus
         </a>
         <Link className="item" to="/view-properties">
           View Properties

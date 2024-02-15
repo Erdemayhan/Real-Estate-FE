@@ -30,7 +30,8 @@ export default function PropertyTypes(){
     }
 
     return (
-        <Section className='property-types' title="Featured-Property-Types" id='types'>
+        <Section className='property-types' id='types'>
+            <h2>Property Types</h2>
             <p className="centered-text">All Property Types that are available</p>
             <Tabs ButtonsContainer="menu"
             buttons={ 
@@ -45,7 +46,9 @@ export default function PropertyTypes(){
                 <TabButton isSelected={selectedType === "dormitory"} onClick={() => handleClick("dormitory")}>Dormitory</TabButton>
                 {/*the way you write the props inside onSelect arrow func must match the way its written in EXAMPLES*/}
             </>}>
-            {tabContent}
+                <div className="tabContent">
+                {tabContent}
+                </div>
             </Tabs>
         </Section>
     )

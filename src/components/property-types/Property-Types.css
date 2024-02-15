@@ -1,21 +1,34 @@
 .property-types {
-  width: 100%; /* Adjust this to change the card's width */
-  margin: 20px auto; /* Auto margins to center the card, 20px vertical margin to separate it from other components */
-  padding: 2rem;
+  margin: 20px; /* Auto margins to center the card, 20px vertical margin to separate it from other components */
+  padding: 4rem;
+  color: white;
   border-radius: 6px;
-  background-color: #00adb5;
+  background-color: #00a6a6;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Box shadow to give the card a "lifted" effect */
-  margin: 4rem auto;
 }
 
-  
+#types {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
 #types menu {
-  margin: 1rem 0;
-  padding: 0;
+  margin: 50px;
   display: flex;
   gap: 0.5rem;
   list-style: none;
   justify-content: center;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.centered-text{
+  color: white;
 }
 
   #types menu, button {
@@ -31,11 +44,11 @@
   }
 
   #types menu button:hover {
-    background-color: #f18d9e;
+    background-color: #E6D72A;
     color: #000000;
   }
   #types menu button.active {
-    background-color: #f18d9e;
+    background-color: #dc3344;
     color: #ebe7ef;
   }
   

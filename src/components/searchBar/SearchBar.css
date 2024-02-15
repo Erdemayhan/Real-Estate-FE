@@ -1,13 +1,9 @@
 .searchbar{
-    background: transparent;
     height: 100vh;
-    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-family: 'Salsa', cursive;
   }
-  .searchbar .container1 {
+  .searchbar .container {
     width: 100%;
     max-width: 800px;
     padding: 0 20px;
@@ -17,47 +13,28 @@
     color: #E6D72A;
     font-size: 48px;
     text-align: center;
-    font-family: 'Salsa', cursive;
-  }
+}
 
 
-  .searchbar p {
-    color:transparent ;
-    opacity: 0.8;
-    text-align: center;
-    font-family: 'Salsa', cursive;
-    font-size: 40px;
-  }
-  form {
-    background-color: transparent;
-    border-radius: 5px;
-    margin-top: 20px;
-    padding: 0 20px;
-  }
-  form input {
-    padding: 10px;
-    width: 100%;
-    border: 1px solid rgba(255, 44, 44, 0.2);
-    margin-top: 5px;
-    border-radius: 4px;
-  }
-  form span {
+
+form {
+  background-color: #F18D9E;
+  padding: 0 20px;
+  border: 2px solid #E85A70;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+}
+
+
+form span {
     font-size: 30px;
+    margin-top: 20px;
     color: rgb(250, 250, 250);
+    align-items: center;
+    justify-content: center;
     font-family: 'Salsa', cursive;
   }
-  input::placeholder {
-    font-size: 17px;
-    color: black;
-    font-family: 'Salsa', cursive;
-  }
-  form .box {
-    padding: 15px;
-    border-left: 1px solid rgba(128, 128, 128, 0.2);
-  }
-  form .box:nth-child(1) {
-    border-left: none;
-  }
+
+
 
   @media screen and (max-width: 800px) {
     .searchbar .container {
@@ -66,29 +43,25 @@
     form {
       display: flex;
       flex-wrap: wrap;
-
-    }
-    form .box {
       border-left: none;
-    }
-    form input {
       width: 100%;
-    }
+}
   }
 
   .custom-select {
     width: 100%;
     padding: 8px 16px;
+    text-align: center;
+    margin-top: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: white;
-    -webkit-appearance: none; /* for iOS */
-    -moz-appearance: none; /* for Firefox */
-    appearance: none; /* For modern browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     position: relative;
 }
 
-/* For the arrow symbol on the right side of the select */
 .custom-select:after {
     content: '▼';
     padding: 12px;
@@ -100,7 +73,7 @@
 }
 
   .btn {
-    background-color: #E6D72A; /* Green */
+    background-color: #E6D72A;
     border: none;
     font-family: 'Salsa', cursive;
     color: white;
@@ -115,8 +88,9 @@
   }
   
   .btn:hover {
-    background-color: #F18D9E; 
+    background-color: #dc3344; 
     color: black; 
-    border: 2px solid #F18D9E;
+    border: 2px solid #000000;
   }
+
 
